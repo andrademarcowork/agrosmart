@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <meta name="theme-color" content="#1f7a4d">
+  <meta
+    name="description"
+    content="AgroEconômico - plataforma para irrigação inteligente e economia de água."
+  >
+
+  <title>AgroEconômico | Irrigação inteligente</title>
+
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+<header class="topbar">
+  <nav class="nav">
+
+    <div class="logo">
+      <span class="logo-mark">🌱</span>
+      AgroEconômico
+    </div>
+
+    <div class="nav-links">
+      <a href="#clima">Clima</a>
+      <a href="#cultivos">Cultivos</a>
+      <a href="#como-funciona">Como funciona</a>
+    </div>
+
+  </nav>
+</header>
+
+
+<main>
+
+  <!-- HERO -->
+  <section class="hero">
+
+    <div>
+
+      <span class="badge">
+        💧 Agricultura + tecnologia + sustentabilidade
+      </span>
+
+      <h1>
+        Cultive melhor.<br>
+        <span>Economize água.</span>
+      </h1>
+
+      <p>
+        Use a localização do aparelho para consultar o clima da sua região
+        e combine as condições meteorológicas com a cultura escolhida para
+        tomar decisões de irrigação mais conscientes.
+      </p>
+
+      <button
+        class="primary-btn"
+        onclick="document.getElementById('clima').scrollIntoView({behavior:'smooth'})"
+      >
+        📍 Ver clima da minha região
+      </button>
+
+    </div>
+
+
+    <div class="hero-card">
+
+      <img
+        src="https://images.unsplash.com/photo-1592982537447-6f2a6a0a0c5a?auto=format&fit=crop&w=1000&q=85"
+        alt="Plantação verde"
+      >
+
+      <div class="hero-overlay">
+
+        <strong>
+          Irrigação mais consciente
+        </strong>
+
+        <span>
+          Use somente o necessário.
+        </span>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- CLIMA -->
+  <section class="section" id="clima">
+
+    <div class="section-heading">
+
+      <div>
+
+        <span class="eyebrow">
+          CLIMA LOCAL
+        </span>
+
+        <h2>
+          🌦️ Condições da sua região
+        </h2>
+
+        <p>
+          Permita o acesso à localização para buscar dados meteorológicos
+          próximos às suas coordenadas.
+        </p>
+
+      </div>
+
+    </div>
+
+
+    <div class="location-panel">
+
+      <div>
+
+        <div
+          class="location-title"
+          id="locationName"
+        >
+          Localização ainda não definida
+        </div>
+
+        <div
+          class="muted"
+          id="locationStatus"
+        >
+          Clique no botão para obter a localização do aparelho.
+        </div>
+
+      </div>
+
+
+      <button
+        class="primary-btn"
+        id="locationBtn"
+      >
+        📍 Usar minha localização
+      </button>
+
+    </div>
+
+
+    <div
+      class="weather-grid"
+      id="weatherPanel"
+    >
+
+      <div class="weather-placeholder">
+
+        <div class="placeholder-icon">
+          📡
+        </div>
+
+        <h3>
+          Aguardando localização
+        </h3>
+
+        <p>
+          O site usará o recurso de localização do aparelho
+          e consultará o Open-Meteo.
+        </p>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- CULTIVOS -->
+  <section class="section" id="cultivos">
+
+    <div class="section-heading">
+
+      <div>
+
+        <span class="eyebrow">
+          SUA PLANTAÇÃO
+        </span>
+
+        <h2>
+          🌾 Escolha uma cultura
+        </h2>
+
+        <p>
+          Selecione uma cultura para consultar informações gerais
+          de irrigação e temperatura.
+        </p>
+
+      </div>
+
+    </div>
+
+
+    <div
+      class="crop-grid"
+      id="cropGrid"
+    ></div>
+
+
+    <div
+      class="details"
+      id="details"
+    ></div>
+
+  </section>
+
+
+  <!-- COMO FUNCIONA -->
+  <section
+    class="section"
+    id="como-funciona"
+  >
+
+    <div class="section-heading">
+
+      <div>
+
+        <span class="eyebrow">
+          PROJETO
+        </span>
+
+        <h2>
+          Como o AgroEconômico funciona?
+        </h2>
+
+      </div>
+
+    </div>
+
+
+    <div class="feature-grid">
+
+      <article>
+
+        <div>📍</div>
+
+        <h3>
+          Localização
+        </h3>
+
+        <p>
+          Obtém latitude e longitude pelo recurso de
+          geolocalização do navegador.
+        </p>
+
+      </article>
+
+
+      <article>
+
+        <div>🌦️</div>
+
+        <h3>
+          Clima
+        </h3>
+
+        <p>
+          Consulta temperatura, umidade, chuva, vento
+          e previsão horária no Open-Meteo.
+        </p>
+
+      </article>
+
+
+      <article>
+
+        <div>💧</div>
+
+        <h3>
+          Decisão
+        </h3>
+
+        <p>
+          Combina as condições climáticas com as necessidades
+          da cultura para orientar a irrigação.
+        </p>
+
+      </article>
+
+    </div>
+
+  </section>
+
+</main>
+
+
+<footer>
+
+  <div>
+
+    <strong>
+      🌱 AgroEconômico
+    </strong>
+
+    <p>
+      Protótipo educativo para irrigação inteligente
+      e economia de água.
+    </p>
+
+  </div>
+
+
+  <div class="footer-source">
+
+    Dados meteorológicos:
+
+    <a
+      href="https://open-meteo.com/"
+      target="_blank"
+      rel="noopener"
+    >
+      Open-Meteo
+    </a>
+
+  </div>
+
+</footer>
+
+
+<script src="js/cultivos.js"></script>
+<script src="js/app.js"></script>
+
+</body>
+</html>
